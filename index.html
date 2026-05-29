@@ -3,236 +3,164 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
+  <meta name="description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres without fences, grippers, or mechanical stops.">
+  <meta name="keywords" content="locomotion, loco-manipulation, permutation invariance, deep sets, teacher-student learning, tactile sensing, multi-object manipulation, reinforcement learning, wheel-legged robot">
+  <meta name="author" content="Anonymous Submission">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="og:site_name" content="S2M-Trek Project Page">
+  <meta property="og:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets">
+  <meta property="og:description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres.">
+  <meta property="og:image" content="static/images/teaser.jpg">
+  <meta property="og:image:alt" content="S2M-Trek multi-sphere transport overview">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets">
+  <meta name="twitter:description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres.">
+  <meta name="twitter:image" content="static/images/teaser.jpg">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
+  <meta name="citation_title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CoRL 2026 (under review)">
+  <meta name="citation_pdf_url" content="static/pdfs/paper.pdf">
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="apple-touch-icon" href="static/images/favicon-256.png">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
+
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+
+  <style>
+    /* Grid layouts for demos and results */
+    .media-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    .media-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .media-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 900px) {
+      .media-grid.cols-3, .media-grid.cols-2 { grid-template-columns: 1fr; }
+    }
+    .media-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .media-cell video,
+    .media-cell img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: #000;
+    }
+    .media-cell img {
+      background: #fff;
+    }
+    .media-cell .caption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #444;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .featured-figure {
+      background: #fff;
+      padding: 1rem 1.25rem 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .featured-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .featured-figure .caption {
+      margin-top: 0.75rem;
+      text-align: center;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 2rem;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    @media (max-width: 800px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+    .result-card img {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+    .result-card .result-title {
+      margin-top: 0.6rem;
+      font-weight: 600;
+      text-align: center;
+      color: #222;
+    }
+    .result-card .result-analysis {
+      margin-top: 0.35rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      line-height: 1.45;
+    }
+  </style>
 </head>
 <body>
 
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
-
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -240,237 +168,264 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">
+              S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot
+            </h1>
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+              <span class="author-block">Anonymous Submission</span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">CoRL 2026 &mdash; Under Review</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/paper.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
+                <!-- TODO: replace with real arXiv ID once available -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#video-demos"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-play-circle"></i></span>
+                    <span>Demos</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#BibTeX"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-right"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
+  <!-- Teaser: composite splice image -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.jpg" alt="S2M-Trek multi-sphere transport overview" style="width:100%; display:block; margin:0 auto;">
+        <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+          A single PFDS policy scales dynamic loco-manipulation from one to <strong>five free-rolling spheres</strong> on the unfenced back plate of the S3 wheel-legged quadruped &mdash; no grippers, no fences, no mechanical stops.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We study the problem of scaling dynamic loco-manipulation from a single free-rolling sphere to multiple spheres transported simultaneously on the back of a wheel-legged quadruped, without fences, grippers, or mechanical stops. Multiple identical free-rolling spheres form an unordered set with no persistent identity: their ordering may change independently at each history frame, creating a <em>per-frame permutation symmetry</em> that standard history-concatenation set encoders do not explicitly enforce&mdash;these encoders impose only a shared, diagonal permutation symmetry over the full history.
+            </p>
+            <p>
+              We show that this symmetry mismatch leads to a concrete failure mode in curriculum-based reinforcement learning. Within the same PPO training budget, flat MLPs and branch-wise encoders plateau at or below the two-sphere stage, while a history-concatenation Deep Sets baseline (DSHC) exhibits the same failure unless ball-to-slot assignments are randomized during training, suggesting that it exploits slot indices as a curriculum shortcut rather than learning identity-free multi-sphere dynamics.
+            </p>
+            <p>
+              We propose <strong>Per-Frame Deep Sets (PFDS)</strong>, which performs permutation-invariant pooling within each history frame before temporal readout, achieving intrinsic invariance to independent per-frame permutations. A 2&times;2 ablation over encoder architecture and slot randomization separates the architectural and data-augmentation pathways to robust multi-sphere transport. Finally, we distill the PFDS teacher into <strong>TactSet</strong> via DAgger, replacing privileged sphere-state observations with a 16&times;16 Boolean union contact map, yielding a compact and naturally permutation-invariant tactile representation evaluated in simulation.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+  <!-- Contributions & Method -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Main Contributions</h2>
+          <div class="content has-text-justified">
+            <ol>
+              <li><strong>A symmetry-mismatch diagnosis.</strong> We formalize multi-sphere transport as a <em>G<sub>frame</sub></em>-invariant policy learning problem and derive the quotient ratio <em>(N!)<sup>H&minus;1</sup></em>&mdash; about <strong>1.7&times;10<sup>6</sup></strong> for <em>N</em>=5 spheres and <em>H</em>=4 history frames &mdash; as a quantitative measure of the non-physical redundancy that standard history-concatenation encoders fail to collapse.</li>
+              <li><strong>The PFDS encoder.</strong> A minimal modification of Deep Sets that pools <em>within</em> each history frame before temporal readout, achieving intrinsic per-frame permutation invariance. We back this with formal proofs of <em>G<sub>frame</sub></em>-invariance and universal approximation.</li>
+              <li><strong>Architecture vs.&nbsp;augmentation, untangled.</strong> An eight-encoder comparison plus a 2&times;2 ablation (encoder &times; slot randomization) cleanly separates the architectural pathway from the data-augmentation pathway to multi-sphere robustness. Five-seed runs confirm PFDS reliability.</li>
+              <li><strong>TactSet: tactile distillation.</strong> A DAgger-distilled student that replaces privileged ball-state observations with a 16&times;16 Boolean contact map &mdash; naturally permutation-invariant by construction &mdash; achieving <strong>75% no-drop</strong> transport of five spheres in simulation.</li>
+            </ol>
+          </div>
+
+          <h2 class="title is-3 has-text-centered" style="margin-top: 2.5rem;">Our Method in a Nutshell</h2>
+          <div class="content has-text-justified">
+            <p>
+              <strong>The problem.</strong> When a quadruped carries multiple identical free-rolling spheres, the observation tensor <em>X &isin; &reals;<sup>H&times;N&times;d</sup></em> indexes balls by an arbitrary slot id at each of <em>H</em> history frames. Because the balls are identical, swapping two slot assignments in <em>any</em> single frame produces a physically equivalent state &mdash; so the correct symmetry group is the per-frame product <em>G<sub>frame</sub> = (S<sub>N</sub>)<sup>H</sup></em>. Standard Deep Sets applied to history-concatenated tokens only respect the much smaller diagonal subgroup <em>G<sub>diag</sub></em>, leaving <em>(N!)<sup>H&minus;1</sup></em>-fold non-physical variation that the policy must learn to ignore from scratch.
+            </p>
+            <p>
+              <strong>PFDS (Per-Frame Deep Sets).</strong> We change <em>where</em> the pooling happens, not how big the network is. A shared MLP <em>&phi;</em> embeds each per-ball feature, masked sum pools <em>within each frame t</em> to a frame embedding <em>h<sub>t</sub></em>, and a temporal MLP <em>&rho;</em> reads out <em>[h<sub>1</sub>; &hellip;; h<sub>H</sub>]</em>. This single re-ordering of operations makes the encoder intrinsically invariant to independent per-frame slot permutations, collapsing the entire <em>G<sub>frame</sub></em> orbit to one representation.
+            </p>
+            <p>
+              <strong>Training &amp; distillation.</strong> The PFDS teacher is trained in Isaac Lab with PPO under a multi-criterion curriculum that gradually increases the sphere count from 1 to 5. We then distill the teacher into <strong>TactSet</strong> via DAgger, replacing the privileged ball state with a 16&times;16 Boolean union contact map &mdash; the same physical contacts visible to a real tactile array. Because the Boolean union is symmetric in its arguments, the tactile observation is <em>G<sub>frame</sub></em>-invariant by construction, semantically aligning the student input with the teacher's quotient representation.
+            </p>
+          </div>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
 
+  <!-- Core PFDS Encoder figure (featured) -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Per-Frame Deep Sets (PFDS) Encoder</h2>
+        <div class="featured-figure">
+          <img src="static/images/pfds_encoder.png" alt="PFDS encoder architecture">
+          <p class="caption">
+            <strong>The core idea.</strong> Per-object observations <em>x<sub>t,i</sub></em> are pooled <em>independently within each history frame t</em> to produce frame embeddings <em>h<sub>t</sub></em>; these are then concatenated and processed by the temporal readout MLP <em>&rho;</em>. Because pooling occurs <em>within</em> each frame, the encoder is intrinsically invariant to independent per-frame permutations (<em>G<sub>frame</sub></em>-invariant) &mdash; collapsing the <em>(N!)<sup>H&minus;1</sup></em> non-physical redundancy left by standard history-concatenation encoders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--BibTex citation -->
+
+  <!-- Full system architecture -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">System Architecture</h2>
+        <div class="featured-figure">
+          <img src="static/images/train_dis.png" alt="Privileged teacher training and tactile-student distillation pipeline">
+          <p class="caption">
+            <strong>Top:</strong> privileged teacher training. The PFDS teacher is trained in Isaac Lab with PPO using privileged object-state observations (position, linear/angular velocity).<br>
+            <strong>Bottom:</strong> tactile-student distillation. TactSet is distilled via DAgger, replacing the privileged observation with a 16&times;16 Boolean union tactile contact map.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Video demos: 1 to 5 spheres, shown as a grid -->
+  <section id="video-demos" class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Multi-Sphere Transport Demos</h2>
+        <p class="has-text-centered" style="margin-bottom: 1.5rem;">
+          A single PFDS teacher policy transports up to five identical free-rolling spheres simultaneously on the unfenced back plate of the S3 wheel-legged robot. Each video shows the same policy evaluated with a different sphere count.
+        </p>
+        <div class="media-grid cols-3">
+          <div class="media-cell">
+            <video poster="static/images/balls_1_poster.jpg" controls muted loop preload="metadata">
+              <source src="static/videos/balls_1.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>1 sphere</strong></div>
+          </div>
+          <div class="media-cell">
+            <video poster="static/images/balls_2_poster.jpg" controls muted loop preload="metadata">
+              <source src="static/videos/balls_2.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>2 spheres</strong></div>
+          </div>
+          <div class="media-cell">
+            <video poster="static/images/balls_3_poster.jpg" controls muted loop preload="metadata">
+              <source src="static/videos/balls_3.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>3 spheres</strong></div>
+          </div>
+          <div class="media-cell">
+            <video poster="static/images/balls_4_poster.jpg" controls muted loop preload="metadata">
+              <source src="static/videos/balls_4.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>4 spheres</strong></div>
+          </div>
+          <div class="media-cell">
+            <video poster="static/images/balls_5_poster.jpg" controls muted loop preload="metadata">
+              <source src="static/videos/balls_5.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>5 spheres</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Encoder comparison figure -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Encoder Comparison</h2>
+        <div class="featured-figure">
+          <img src="static/images/encoder_comparison.png" alt="Encoder architecture comparison">
+          <p class="caption">
+            <strong>Eight-encoder comparison.</strong> Flat MLP, Branch-MLP, history-concatenation Deep Sets (DSHC), and PFDS differ in how they impose permutation structure across history. Only PFDS achieves intrinsic <em>G<sub>frame</sub></em>-invariance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Results: small grid with brief analyses -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <p class="has-text-centered" style="max-width: 760px; margin: 0 auto 1.75rem;">
+          A summary of the four headline experiments. Full numbers, ablations, and confidence intervals are in the paper.
+        </p>
+        <div class="results-grid">
+          <div class="result-card">
+            <img src="static/images/curriculum_left.png" alt="Curriculum progression across encoders">
+            <div class="result-title">Curriculum reach</div>
+            <div class="result-analysis">
+              Within the same PPO budget, only PFDS advances to the 5-sphere stage. Flat MLP and Branch-MLP plateau at or below 2 spheres &mdash; the symmetry mismatch is a hard bottleneck, not just slower learning.
+            </div>
+          </div>
+          <div class="result-card">
+            <img src="static/images/curriculum_right.png" alt="Curriculum advancement conditions">
+            <div class="result-title">Advancement criteria</div>
+            <div class="result-analysis">
+              Per-criterion view (episode length, support margin, dangerous fraction, edge overflow, tracking error): PFDS meets every advancement gate cleanly, while baselines stall on edge-overflow and dangerous-fraction.
+            </div>
+          </div>
+          <div class="result-card">
+            <img src="static/images/seed_variance.png" alt="PFDS seed variance">
+            <div class="result-title">Seed reliability</div>
+            <div class="result-analysis">
+              Five independent seeds all reach 5 spheres with low variance, showing the result is an architectural property of PFDS rather than a single-seed lottery.
+            </div>
+          </div>
+          <div class="result-card">
+            <img src="static/images/tactset_results.png" alt="TactSet distillation results">
+            <div class="result-title">TactSet distillation</div>
+            <div class="result-analysis">
+              The DAgger-distilled student reaches <strong>75% no-drop</strong> on 5 spheres using only a 16&times;16 Boolean contact map &mdash; privileged ball state is replaced with a deployable tactile signal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BibTeX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -480,41 +435,33 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@inproceedings{s2mtrek2026,
+  title     = {S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot},
+  author    = {Anonymous},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2026},
+  note      = {Under review}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  </main>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
