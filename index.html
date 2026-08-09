@@ -183,6 +183,48 @@
       line-height: 1.5;
       text-align: center;
     }
+    /* Zero-shot count-extrapolation table */
+    .ood-table-wrap {
+      max-width: 740px;
+      margin: 1.5rem auto 0;
+      overflow-x: auto;
+    }
+    .ood-table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+    .ood-table th,
+    .ood-table td {
+      padding: 0.55rem 0.75rem;
+      text-align: center;
+      border-bottom: 1px solid #e8eaed;
+    }
+    .ood-table thead th {
+      color: #222;
+      font-weight: 700;
+      border-bottom: 2px solid #cfd4da;
+    }
+    .ood-table tbody tr:last-child td,
+    .ood-table tbody tr:last-child th { border-bottom: none; }
+    .ood-table tbody th {
+      text-align: left;
+      font-weight: 600;
+      color: #222;
+    }
+    .ood-table .strict-col { color: #c53030; font-weight: 600; }
+    .ood-note {
+      max-width: 740px;
+      margin: 0.75rem auto 0;
+      font-size: 0.8rem;
+      color: #666;
+      line-height: 1.5;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -486,6 +528,57 @@
             <strong>Eight-encoder comparison.</strong> Flat MLP, Branch-MLP, history-concatenation Deep Sets (DSHC), and PFDS differ in how they impose permutation structure across history. Only PFDS achieves intrinsic <em>G<sub>frame</sub></em>-invariance.
           </p>
         </div>
+
+        <h3 class="title is-5 has-text-centered" style="margin-top: 2.75rem;">Beyond the Training Range: Zero-Shot <em>k</em>&nbsp;=&nbsp;6,&nbsp;7,&nbsp;8</h3>
+        <p class="has-text-centered" style="max-width: 820px; margin: 0 auto;">
+          The curriculum stops at five spheres, but the policy does not. Evaluated zero-shot on six, seven, and eight spheres, the PFDS teacher keeps the whole set balanced and moving: it retains <strong>every</strong> sphere in 98% / 95% / 93% of episodes, with the eight-sphere payload sitting 60% above the heaviest load it ever saw in training.
+        </p>
+        <p class="has-text-centered" style="max-width: 820px; margin: 0.9rem auto 0;">
+          What collapses is not transport capability but <strong>geometric slack</strong>. The back plate simply is not large enough for that many spheres: once it is crowded, the spheres have nowhere to sit except close to the rim, so <em>strict</em> success &mdash; every sphere inside the safe zone for the entire episode, never crossing the danger boundary &mdash; falls off a cliff, from 54% at <em>k</em>&nbsp;=&nbsp;6 to 3% and 1%. The two metrics come apart exactly as the packing bound predicts: <em>no-drop</em> measures whether the policy can carry the load, <em>strict</em> measures whether the plate has room to spare. The distilled TactSet student degrades gracefully over the same range instead of failing abruptly.
+        </p>
+        <div class="ood-table-wrap">
+          <table class="ood-table">
+            <thead>
+              <tr>
+                <th rowspan="2" style="text-align:left;">Spheres (zero-shot)</th>
+                <th colspan="2">PFDS teacher</th>
+                <th colspan="2">TactSet student</th>
+              </tr>
+              <tr>
+                <th>no-drop</th>
+                <th>strict</th>
+                <th>no-drop</th>
+                <th>strict</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><em>k</em> = 6</th>
+                <td>98%</td>
+                <td class="strict-col">54%</td>
+                <td>80%</td>
+                <td class="strict-col">26%</td>
+              </tr>
+              <tr>
+                <th><em>k</em> = 7</th>
+                <td>95%</td>
+                <td class="strict-col">3%</td>
+                <td>59%</td>
+                <td class="strict-col">5%</td>
+              </tr>
+              <tr>
+                <th><em>k</em> = 8</th>
+                <td>93%</td>
+                <td class="strict-col">1%</td>
+                <td>33%</td>
+                <td class="strict-col">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="ood-note">
+          100 episodes per cell, one model per arm. Run on the wider-plate robot variant, because six spheres do not fit inside the safe zone of the plate used for the main results at all &mdash; which is the same area limit these numbers are measuring.
+        </p>
       </div>
     </div>
   </section>
