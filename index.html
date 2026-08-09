@@ -439,18 +439,37 @@
           <strong>Panel layout.</strong> Top left: overhead camera view of the robot and spheres. Top right: live 16&times;16 Boolean contact map (5&nbsp;g threshold) with the active taxel list. Bottom left: number of active cells over the full rollout, with the playhead marking the current instant. Bottom right: body-pitch indicator (tilt drawn &times;5).
         </p>
 
-        <h3 class="title is-5 has-text-centered" style="margin-top: 2.75rem;">Stationary Tactile Reference</h3>
+        <h3 class="title is-5 has-text-centered" style="margin-top: 2.75rem;">Quadruped Baseline: Five Spheres Held in Place</h3>
         <div class="media-cell is-solo">
           <video poster="static/images/real_original_fixed_poster.jpg" controls muted loop playsinline preload="metadata">
             <source src="static/videos/real_original_fixed.mp4" type="video/mp4">
           </video>
           <div class="caption">
-            <strong>Five spheres at rest, robot held level</strong><span class="speed-badge is-realtime">1&times; real time</span>
+            <strong>Legged stance, five spheres</strong><span class="speed-badge is-realtime">1&times; real time</span>
           </div>
         </div>
         <p class="panel-legend">
-          A stationary baseline clip in the original legged stance: with the platform level and the spheres at rest, five distinct taxels light up in the contact map &mdash; each sphere registers as a separate contact before any motion is commanded.
+          The same capture setup on the quadruped platform: the robot holds its position in the original legged stance while carrying five spheres on the tactile plate. All five stay on the plate for the whole clip, and the contact map tracks five separate contacts throughout. Shown at real-time speed rather than 3&times;.
         </p>
+
+        <h3 class="title is-5 has-text-centered" style="margin-top: 2.75rem;">Comparison-Method Failure Cases</h3>
+        <p class="has-text-centered" style="max-width: 820px; margin: 0 auto 1.25rem; font-size: 0.95rem;">
+          Hardware rollouts of the comparison methods on the same quadruped platform and the same five-sphere payload. In both runs a sphere rolls off the plate mid-transport, and the contact map drops from five active taxels to four.
+        </p>
+        <div class="media-grid cols-2">
+          <div class="media-cell">
+            <video poster="static/images/real_failure_1_poster.jpg" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/real_failure_1.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>Failure case 1 &mdash; sphere lost (5 &rarr; 4)</strong><span class="speed-badge is-realtime">1&times; real time</span></div>
+          </div>
+          <div class="media-cell">
+            <video poster="static/images/real_failure_2_poster.jpg" controls muted loop playsinline preload="metadata">
+              <source src="static/videos/real_failure_2.mp4" type="video/mp4">
+            </video>
+            <div class="caption"><strong>Failure case 2 &mdash; sphere lost (5 &rarr; 4)</strong><span class="speed-badge is-realtime">1&times; real time</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
