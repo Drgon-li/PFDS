@@ -5,28 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
-  <meta name="description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres without fences, grippers, or mechanical stops.">
+  <meta name="description" content="Accepted to CoRL 2026: S2M-Trek uses Per-Frame Deep Sets to transport up to five free-rolling spheres on a wheel-legged robot and validates a tactile deployment stack.">
   <meta name="keywords" content="locomotion, loco-manipulation, permutation invariance, deep sets, teacher-student learning, tactile sensing, multi-object manipulation, reinforcement learning, wheel-legged robot">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="S2M-Trek Project Page">
-  <meta property="og:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets">
-  <meta property="og:description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres.">
+  <meta property="og:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
+  <meta property="og:description" content="Accepted to CoRL 2026. Per-Frame Deep Sets enable a wheel-legged robot to transport up to five free-rolling spheres and support tactile deployment.">
   <meta property="og:image" content="static/images/teaser.jpg">
   <meta property="og:image:alt" content="S2M-Trek multi-sphere transport overview">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets">
-  <meta name="twitter:description" content="Per-Frame Deep Sets (PFDS) enable a wheel-legged robot to scale dynamic loco-manipulation from one to five free-rolling spheres.">
+  <meta name="twitter:title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
+  <meta name="twitter:description" content="Accepted to CoRL 2026. Per-Frame Deep Sets enable a wheel-legged robot to transport up to five free-rolling spheres and support tactile deployment.">
   <meta name="twitter:image" content="static/images/teaser.jpg">
 
   <meta name="citation_title" content="S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="CoRL 2026 (under review)">
-  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2606.01332">
+  <meta name="citation_conference_title" content="Proceedings of the 10th Conference on Robot Learning (CoRL 2026)">
+  <meta name="citation_pdf_url" content="https://drgon-li.github.io/PFDS/static/pdfs/paper.pdf">
   <meta name="citation_arxiv_id" content="2606.01332">
+  <meta name="citation_author" content="Zong Chen">
+  <meta name="citation_author" content="Xuebin Li">
+  <meta name="citation_author" content="Jinpeng Xiao">
+  <meta name="citation_author" content="Shaoyang Li">
+  <meta name="citation_author" content="Ben Liu">
+  <meta name="citation_author" content="Min Li">
+  <meta name="citation_author" content="Zhouping Yin">
+  <meta name="citation_author" content="Yiqun Li">
 
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
@@ -243,13 +251,25 @@
               S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot
             </h1>
 
+            <p class="subtitle is-4" style="margin-bottom: 1.25rem;">CoRL 2026 &middot; Accepted</p>
+            <p class="is-size-5 publication-authors">
+              Zong Chen<sup>1,&dagger;</sup>, Xuebin Li<sup>2</sup>, Jinpeng Xiao<sup>1</sup>, Shaoyang Li<sup>1</sup>,
+              Ben Liu<sup>1</sup>, Min Li<sup>1</sup>, Zhouping Yin<sup>1</sup>, Yiqun Li<sup>1,*</sup>
+            </p>
+            <p class="is-size-6 publication-affiliations">
+              <sup>1</sup>School of Mechanical Science and Engineering, Huazhong University of Science and Technology<br>
+              <sup>2</sup>School of Mathematics, Harbin Institute of Technology<br>
+              <sup>&dagger;</sup><a href="mailto:skelon_chan@hust.edu.cn">skelon_chan@hust.edu.cn</a>
+              &nbsp;&middot;&nbsp; <sup>*</sup>Corresponding author
+            </p>
+
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
                   <a href="static/pdfs/paper.pdf" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
+                    <span>Camera-Ready Paper</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -310,13 +330,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We study the problem of scaling dynamic loco-manipulation from a single free-rolling sphere to multiple spheres transported simultaneously on the back of a wheel-legged quadruped, without fences, grippers, or mechanical stops. Multiple identical free-rolling spheres form an unordered set with no persistent identity: their ordering may change independently at each history frame, creating a <em>per-frame permutation symmetry</em> that standard history-concatenation set encoders do not explicitly enforce&mdash;these encoders impose only a shared, diagonal permutation symmetry over the full history.
-            </p>
-            <p>
-              We show that this symmetry mismatch leads to a concrete failure mode in curriculum-based reinforcement learning. Within the same PPO training budget, flat MLPs and branch-wise encoders plateau at or below the two-sphere stage, while a history-concatenation Deep Sets baseline (DSHC) exhibits the same failure unless ball-to-slot assignments are randomized during training, suggesting that it exploits slot indices as a curriculum shortcut rather than learning identity-free multi-sphere dynamics.
-            </p>
-            <p>
-              We propose <strong>Per-Frame Deep Sets (PFDS)</strong>, which performs permutation-invariant pooling within each history frame before temporal readout, achieving intrinsic invariance to independent per-frame permutations. A 2&times;2 ablation over encoder architecture and slot randomization separates the architectural and data-augmentation pathways to robust multi-sphere transport. Finally, we distill the PFDS teacher into <strong>TactSet</strong> via DAgger, replacing privileged sphere-state observations with a 16&times;16 Boolean union contact map, yielding a compact and naturally permutation-invariant tactile representation evaluated in simulation.
+              Conventional object transport typically relies on containers, fences, or tethers to secure the payload. Here, a wheel-legged robot transports up to five identical, free-rolling steel spheres on an open back plate without physical restraints. Because the spheres are indistinguishable, their observation-slot assignments may change independently across history frames, creating a <em>per-frame permutation symmetry</em> that standard history-concatenation set encoders do not enforce. This mismatch becomes a bottleneck beyond two spheres: under the same PPO budget, flat and branch-wise MLPs plateau at or below two spheres, while a history-concatenation Deep Sets baseline (<strong>DSHC</strong>) also stalls unless slot assignments are randomized during training. We introduce <strong>Per-Frame Deep Sets (PFDS)</strong>, which pools objects invariantly within each frame before temporal fusion. PFDS is <em>G<sub>frame</sub></em>-invariant by construction, and we prove universal approximation of continuous <em>G<sub>frame</sub></em>-invariant policies. In a 2&times;2 ablation over architecture and slot randomization, PFDS reaches five spheres across all five seeds and achieves <strong>100% no-drop transport</strong>, whereas DSHC relies on augmentation for reliable curriculum progression. We also distill the privileged PFDS teacher into <strong>TactSet</strong>, which observes only a <em>G<sub>frame</sub></em>-invariant binary union contact map and retains <strong>75% no-drop performance</strong> with five spheres. Finally, we run the S2M-Trek deployment stack closed-loop on a physical wheel-legged robot for every sphere count <em>k</em>=1,&hellip;,5. The measured tactile maps contain one connected component per sphere but no persistent identity, complementing the quantitative simulation results.
             </p>
           </div>
         </div>
@@ -336,7 +350,7 @@
               <li><strong>A symmetry-mismatch diagnosis.</strong> We formalize multi-sphere transport as a <em>G<sub>frame</sub></em>-invariant policy learning problem and derive the quotient ratio <em>(N!)<sup>H&minus;1</sup></em>&mdash; about <strong>1.7&times;10<sup>6</sup></strong> for <em>N</em>=5 spheres and <em>H</em>=4 history frames &mdash; as a quantitative measure of the non-physical redundancy that standard history-concatenation encoders fail to collapse.</li>
               <li><strong>The PFDS encoder.</strong> A minimal modification of Deep Sets that pools <em>within</em> each history frame before temporal readout, achieving intrinsic per-frame permutation invariance. We back this with formal proofs of <em>G<sub>frame</sub></em>-invariance and universal approximation.</li>
               <li><strong>Architecture vs.&nbsp;augmentation, untangled.</strong> An eight-encoder comparison plus a 2&times;2 ablation (encoder &times; slot randomization) cleanly separates the architectural pathway from the data-augmentation pathway to multi-sphere robustness. Five-seed runs confirm PFDS reliability.</li>
-              <li><strong>TactSet: tactile distillation.</strong> A DAgger-distilled student that replaces privileged ball-state observations with a 16&times;16 Boolean contact map &mdash; naturally permutation-invariant by construction &mdash; achieving <strong>75% no-drop</strong> transport of five spheres in simulation.</li>
+              <li><strong>TactSet and physical validation.</strong> We distill the privileged PFDS teacher into a student using a 16&times;16 binary union tactile map. TactSet retains <strong>75% no-drop</strong> transport with five spheres under the original simulator assets and <strong>85%</strong> in the matched evaluation harness. We also run the same deployment stack closed-loop on the physical robot for <em>k</em>=1,&hellip;,5; its tactile maps show one connected component per sphere without persistent identity.</li>
             </ol>
           </div>
 
@@ -531,10 +545,10 @@
 
         <h3 class="title is-5 has-text-centered" style="margin-top: 2.75rem;">Beyond the Training Range: Zero-Shot <em>k</em>&nbsp;=&nbsp;6,&nbsp;7,&nbsp;8</h3>
         <p class="has-text-centered" style="max-width: 820px; margin: 0 auto;">
-          The curriculum stops at five spheres, but the policy does not. Evaluated zero-shot on six, seven, and eight spheres, the PFDS teacher keeps the whole set balanced and moving: it retains <strong>every</strong> sphere in 98% / 95% / 93% of episodes, with the eight-sphere payload sitting 60% above the heaviest load it ever saw in training.
+          The curriculum stops at five spheres, but the policies also extrapolate zero-shot to six, seven, and eight. The PFDS teacher retains <strong>every</strong> sphere in 98% / 95% / 93% of episodes, while the TactSet student reaches 80% / 59% / 33% full-retention rates, respectively.
         </p>
         <p class="has-text-centered" style="max-width: 820px; margin: 0.9rem auto 0;">
-          What collapses is not transport capability but <strong>geometric slack</strong>. The back plate simply is not large enough for that many spheres: once it is crowded, the spheres have nowhere to sit except close to the rim, so <em>strict</em> success &mdash; every sphere inside the safe zone for the entire episode, never crossing the danger boundary &mdash; falls off a cliff, from 54% at <em>k</em>&nbsp;=&nbsp;6 to 3% and 1%. The two metrics come apart exactly as the packing bound predicts: <em>no-drop</em> measures whether the policy can carry the load, <em>strict</em> measures whether the plate has room to spare. The distilled TactSet student degrades gracefully over the same range instead of failing abruptly.
+          The table also reports <em>strict</em> success, which adds motion and support-margin requirements to full-horizon payload retention. The widening gap at larger counts shows that retaining every sphere and maintaining the stricter transport criteria measure different aspects of performance.
         </p>
         <div class="ood-table-wrap">
           <table class="ood-table">
@@ -577,7 +591,7 @@
           </table>
         </div>
         <p class="ood-note">
-          100 episodes per cell, one model per arm. Run on the wider-plate robot variant, because six spheres do not fit inside the safe zone of the plate used for the main results at all &mdash; which is the same area limit these numbers are measuring.
+          Evaluations use 100 episodes per model and sphere count in MuJoCo. As in the paper, this is the same robot equipped with twice the tactile sensing area: two 16&times;16 panels represented as a 32&times;16 map. Counts <em>k</em>=6, 7, and 8 are zero-shot and were not used during training.
         </p>
       </div>
     </div>
@@ -597,28 +611,28 @@
             <img src="static/images/curriculum_left.png" alt="Curriculum progression across encoders">
             <div class="result-title">Curriculum reach</div>
             <div class="result-analysis">
-              Within the same PPO budget, only PFDS advances to the 5-sphere stage. Flat MLP and Branch-MLP plateau at or below 2 spheres &mdash; the symmetry mismatch is a hard bottleneck, not just slower learning.
+              PFDS reaches five spheres with and without slot-permutation augmentation across all five seeds. DSHC reaches five spheres with augmentation but stalls at two without it; Flat-MLP and Branch-MLP plateau at or below two spheres.
             </div>
           </div>
           <div class="result-card">
             <img src="static/images/curriculum_right.png" alt="Curriculum advancement conditions">
             <div class="result-title">Advancement criteria</div>
             <div class="result-analysis">
-              Per-criterion view (episode length, support margin, dangerous fraction, edge overflow, tracking error): PFDS meets every advancement gate cleanly, while baselines stall on edge-overflow and dangerous-fraction.
+              The six promotion criteria combine episode length, support margin, unsafe-state and edge fractions, and velocity and yaw tracking errors. Promotion requires all six gates to be met together.
             </div>
           </div>
           <div class="result-card">
             <img src="static/images/seed_variance.png" alt="PFDS seed variance">
             <div class="result-title">Seed reliability</div>
             <div class="result-analysis">
-              Five independent seeds all reach 5 spheres with low variance, showing the result is an architectural property of PFDS rather than a single-seed lottery.
+              All five independent PFDS seeds reach five spheres, supporting the repeatability of curriculum progression across random seeds.
             </div>
           </div>
           <div class="result-card">
             <img src="static/images/tactset_results.png" alt="TactSet distillation results">
             <div class="result-title">TactSet distillation</div>
             <div class="result-analysis">
-              The DAgger-distilled student reaches <strong>75% no-drop</strong> on 5 spheres using only a 16&times;16 Boolean contact map &mdash; privileged ball state is replaced with a deployable tactile signal.
+              The DAgger-distilled student reaches <strong>75% no-drop</strong> on five spheres under the original simulator assets and <strong>85%</strong> in the matched evaluation harness, using only a 16&times;16 binary tactile map.
             </div>
           </div>
         </div>
@@ -637,11 +651,13 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{s2mtrek2026,
-  title   = {S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot},
-  journal = {arXiv preprint arXiv:2606.01332},
-  year    = {2026},
-  url     = {https://arxiv.org/abs/2606.01332}
+      <pre id="bibtex-code"><code>@inproceedings{s2mtrek2026,
+  author    = {Chen, Zong and Li, Xuebin and Xiao, Jinpeng and Li, Shaoyang and
+               Liu, Ben and Li, Min and Yin, Zhouping and Li, Yiqun},
+  title     = {S2M-Trek: From Single to Multi-Sphere Transport via Per-Frame Deep Sets on a Wheel-Legged Robot},
+  booktitle = {Proceedings of the 10th Conference on Robot Learning (CoRL 2026)},
+  year      = {2026},
+  url       = {https://drgon-li.github.io/PFDS}
 }</code></pre>
     </div>
   </section>
